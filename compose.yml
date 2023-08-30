@@ -1,0 +1,23 @@
+services:
+  app:
+    image: node
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - 127.0.0.1:4000:4000
+    working_dir: /app
+    volumes:
+      - ./server:/app
+    environment:
+      MONGODB_URL: mongodb://mongo:27017/graphqldemo
+  mongo:
+    image: mongo
+    ports: 
+      - 127.0.0.1:29999:27017
+  client:
+    image: node
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - 127.0.0.1:5173:5173
+    working_dir: /app
+    volumes:
+      - ./client:/app

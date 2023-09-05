@@ -11,9 +11,9 @@ const Layout: FC<LayoutProps> = ({ header, sidebar, footer }) => {
         <div>
             {header}
         </div>
-        <div style={{ display: "flex", height: "100%" }}>
+        <div className='flex h-full w-full'>
             {sidebar}
-            <div style={{ width: "100%", padding: 10 }}>
+            <div className='w-4/5'>
                 B
             </div>
 

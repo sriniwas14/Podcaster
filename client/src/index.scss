@@ -1,5 +1,10 @@
-$bg-color-two: #e5e5e5;
-$bg-color: #ffffff;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$bg-color-two: #082032;
+$bg-color: #2C394B;
+$text-color: #ffffff;
 
 html,
 body,
@@ -7,57 +12,16 @@ body,
     height: 100%;
 }
 
-html {
-    background: $bg-color-two;
-}
-
 body {
     margin: 0;
     font-family: Inter;
 }
 
-.csHeader {
-    padding: 5px;
-    border-bottom: 1px solid $bg-color-two;
-
-    .csCard {
-        display: flex;
-
-        .csTitle {
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        .csSearchInput {
-            margin: auto;
-            min-width: 33%;
-            padding: 10px;
-            border-radius: 10px;
-            background: $bg-color-two;
-            border: 1px solid $bg-color-two;
-            text-align: center;
-        }
-    }
+textarea:focus,
+input:focus {
+    outline: none;
 }
 
-.csSidebar {
-    width: 300px;
-    border-right: 1px solid $bg-color-two;
-    height: auto;
-    padding: 5px;
-    position: relative;
-
-    .csCard {
-        position: absolute;
-        inset: 5px;
-    }
-}
-
-.csCard {
-    padding: 12px;
-    border-radius: 8px;
-    background-color: $bg-color;
-}
 
 .csLayout {
     display: flex;

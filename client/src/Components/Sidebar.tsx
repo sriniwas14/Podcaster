@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import SearchInput from './SearchInput';
-import { BiHomeCircle, BiListOl, BiListUl } from 'react-icons/bi';
+import { BiCog, BiHomeCircle, BiListOl, BiListUl } from 'react-icons/bi';
 
 interface SidebarProps {
 
@@ -20,7 +20,8 @@ const SidebarMenu = ({ items, onClick }) => {
 const menuItems = [
     { id: 1, icon: <BiHomeCircle />, title: "Explore", active: true },
     { id: 2, icon: <BiListUl />, title: "Subscription" },
-    { id: 3, icon: <BiListOl />, title: "Queue" }
+    { id: 3, icon: <BiListOl />, title: "Queue" },
+    { id: 4, icon: <BiCog />, title: "Settings" }
 ]
 
 const Sidebar: FC<SidebarProps> = ({ }) => {
@@ -33,11 +34,10 @@ const Sidebar: FC<SidebarProps> = ({ }) => {
     return (
         <div className='px-2 w-1/5'>
             <div className="bg-zinc-900 h-full w-full rounded-lg pt-1">
-                <div className={"text-white text-lg rounded-lg p-4 bg-gradient-to-b from-indigo-700 to-indigo-800"}>
-                    Good Morning!
+                <div className={"text-white text-lg rounded-lg p-4"}>
+                    Hi Sriniwas!
                 </div>
                 <SidebarMenu items={items} onClick={(itemId) => setActiveItem(itemId)} />
-
             </div>
         </div>
     )

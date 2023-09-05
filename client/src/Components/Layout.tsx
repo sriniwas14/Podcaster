@@ -4,9 +4,10 @@ interface LayoutProps {
     header: any;
     sidebar: any;
     footer: any;
+    outlet: any;
 }
 
-const Layout: FC<LayoutProps> = ({ header, sidebar, footer }) => {
+const Layout: FC<LayoutProps> = ({ header, sidebar, footer, outlet }) => {
     return <div className='csLayout bg-zinc-950'>
         <div>
             {header}
@@ -14,7 +15,7 @@ const Layout: FC<LayoutProps> = ({ header, sidebar, footer }) => {
         <div className='flex h-full w-full'>
             {sidebar}
             <div className='w-4/5'>
-                B
+                {outlet}
             </div>
 
         </div>

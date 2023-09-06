@@ -5,6 +5,7 @@
 $bg-color-two: #082032;
 $bg-color: #2C394B;
 $text-color: #ffffff;
+$primary-color: #4338ca;
 
 html,
 body,
@@ -27,4 +28,20 @@ input:focus {
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.playSlider {
+    width: 100%;
+    background: $primary-color;
+    height: 10px;
+    overflow: hidden;
+
+    &::-moz-range-thumb,
+    &::-webkit-thumb {
+        box-shadow: -100vw 0 0 100vw lighten($color: $primary-color, $amount: 30);
+        background-color: white;
+        height: 12px;
+        border-radius: 0;
+        border: 0;
+    }
 }

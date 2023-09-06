@@ -14,7 +14,7 @@ const Layout: FC<LayoutProps> = ({ header, sidebar, footer, outlet }) => {
         </div>
         <div className='flex h-full w-full'>
             {sidebar}
-            <div className='w-4/5'>
+            <div className='w-4/5 overflow-scroll'>
                 {outlet}
             </div>
 

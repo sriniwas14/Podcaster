@@ -18,7 +18,10 @@ const RoundedButton: FC<RoundedButtonType> = ({ icon, padding }) => {
 
 const Footer: FC<FooterPropsType> = ({ }) => {
     return (
-        <div className='p-2'>
+        <div className='p-2 full rounded-xl'>
+            <div className='flex text-white'>
+                <input className="playSlider" type="range" />
+            </div>
             <div className='bg-zinc-900 rounded flex p-4'>
                 <div className='text-white text-size-100 text-xl my-auto'>Something</div>
                 <div className='w-auto mx-auto flex'>
